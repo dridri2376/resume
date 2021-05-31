@@ -1,0 +1,113 @@
+@charset "utf-8";
+@import "../node_modules//bulma/bulma.sass";
+@import "_variables.scss";
+@import "_mixins.scss";
+
+body {
+  padding: $base_size / 2;
+  background: linear-gradient(#adacac, #ffffff);
+  font-family: "Roboto", "Times New Roman", "Sasn Serif";
+  font-size: large;
+
+  blockquote {
+    font-size: medium;
+  }
+}
+
+.header-container {
+  @include flexCol;
+
+  img {
+    width: $base_size * 12;
+    height: $base_size * 12;
+    rotate: 270deg;
+  }
+
+  .resume-infos-list {
+    border-radius: $base_size / 2;
+  }
+
+  .info {
+    background-color: $base_color;
+    color: #ffffff;
+    border-radius: $base_size / 2;
+
+    p {
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    &:hover {
+      background-color: #051f3b;
+    }
+  }
+}
+
+.resume-card-list {
+  @include flexCenter;
+
+  .card {
+    height: $base_size * 10;
+    margin: $base_size;
+    width: $base_size * 25;
+    border-radius: $base_size / 2;
+    @include flexCenter;
+    cursor: pointer;
+
+    .visual-card-title:hover {
+      font-size: $base_size * 1.5;
+
+      a {
+        color: #008000;
+      }
+    }
+
+    &.--SC-card {
+      background-color: #ffa07a;
+    }
+
+    &.--XP-card {
+      background-color: #add8e6;
+    }
+
+    &.--OT-card {
+      background-color: #20b2aa;
+    }
+
+    &.--WM-card {
+      background-color: #dda0dd;
+    }
+  }
+}
+
+.job-item,
+.tech-item,
+.personal-item {
+  list-style-type: disc;
+}
+
+.footer-section {
+  height: fit-content;
+  background-color: #d35ff0;
+  text-align: center;
+  border-radius: $base_size / 2;
+}
+
+@media screen and (max-width: 1250px) {
+  .resume-infos-list {
+    @include flexCol;
+  }
+
+  .resume-card-list {
+    @include flexCol;
+
+    .card {
+      width: 100%;
+    }
+  }
+}

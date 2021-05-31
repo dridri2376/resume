@@ -1,0 +1,22 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "my resume",
+  "main": "index.ts",
+  "scripts": {
+    "tsw": "tsc --watch",
+    "stw": "sass --watch ./styles/main.scss:./compiled/main.css"
+  },
+  "keywords": [
+    "resume"
+  ],
+  "author": "adrien <adriengrodecoeur@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-icons": "^1.4.1",
+    "bulma": "^0.9.2",
+    "node-sass": "^5.0.0",
+    "sass": "^1.32.11",
+    "typescript": "^4.2.4"
+  }
+}
